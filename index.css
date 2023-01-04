@@ -1,0 +1,191 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+h1 {
+	font-family: 'Courgette', cursive;
+	font-size: 3vw;
+	user-select: none;
+}
+
+h2 {
+	font-family: 'Courgette', cursive;
+	font-size: 1.5vw;
+	user-select: none;
+	margin: 0;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+#gameboard {
+	justify-content: center;
+	align-content: center;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	column-gap: 2vw;
+	row-gap: 3vw;
+}
+
+#game {
+	flex: 1;
+	justify-content: center;
+}
+
+#gameboard > div {
+	background-color: transparent;
+	display: flex;
+}
+
+#gameboard > div > div {
+	background-color: aqua;
+	z-index: -99;
+	height: 2.5vw;
+	width: 2.5vw;
+	padding: 1vw;
+	border-radius: 1vw;
+	border: 0.5vw solid rgb(155, 200, 202);
+	font-size: 2vw;
+    justify-content: center;
+    align-items: center;
+	transition: transform 0.06s;
+	font-family: 'Arvo', serif;
+	user-select: none;
+	display: flex;
+	align-items: center;
+}
+
+#gamestatus {
+	visibility: hidden;
+}
+
+#counter {
+	align-items: flex-end;
+	visibility: hidden;
+	padding-right: 3vw;
+	padding-top: 1vw;
+	flex: 0;
+}
+
+a {
+	font-size: larger;
+	color: black;
+	transition: color ease-in 0.3s;
+}
+
+a:hover {
+	color: blueviolet
+}
+
+footer {
+	text-align: end;
+	padding-right: 3vw;
+	padding-bottom: 1vw;
+}
+
+
+/* For smaller sized screens */
+
+/* Small Phones */
+@media (max-width: 480px) and (min-width:0px) {
+	#gameboard > div > div {
+		height: 6.5vw;
+		width: 6.5vw;
+		padding: 6vw;
+		border-radius: 5vw;
+		border: 1.5vw solid rgb(155, 200, 202);
+		font-size: 8vw;
+	}
+	h1 {
+		font-size: 8vw;
+	}
+	h2 {
+		font-size: 7vw;
+	}
+}
+
+/* Big Phones */
+@media (max-width: 599px) and (min-width:481px) {
+	#gameboard > div > div {
+		height: 6.5vw;
+		width: 6.5vw;
+		padding: 6vw;
+		border-radius: 5vw;
+		border: 1.5vw solid rgb(155, 200, 202);
+		font-size: 8vw;
+	}
+	h1 {
+		font-size: 8vw;
+	}
+	h2 {
+		font-size: 7vw;
+	}
+}
+
+/* Small Tablets */
+@media (max-width: 849px) and (min-width:600px) {
+	#gameboard > div > div {
+		height: 6vw;
+		width: 6vw;
+		padding: 3vw;
+		border-radius: 3vw;
+		border: 1vw solid rgb(155, 200, 202);
+		font-size: 5vw;
+	}
+	h1 {
+		font-size: 6vw;
+	}
+	h2 {
+		font-size: 5vw;
+	}
+}
+
+/* Big Tablets */
+@media (max-width: 1024px) and (min-width:850px) {
+	#gameboard > div > div {
+		height: 4.5vw;
+		width: 4.5vw;
+		padding: 2vw;
+		border-radius: 2.5vw;
+		border: 0.8vw solid rgb(155, 200, 202);
+		font-size: 3.5vw;
+	}
+	h1 {
+		font-size: 4vw;
+	}
+	h2 {
+		font-size: 3vw;
+	}
+}
+
+/* Small Screens */
+@media (max-width: 1200px) and (min-width:1025px) {
+	#gameboard > div > div {
+		height: 3.5vw;
+		width: 3.5vw;
+		padding: 2vw;
+		border-radius: 2vw;
+		border: 0.8vw solid rgb(155, 200, 202);
+		font-size: 3vw;
+	}
+	h1 {
+		font-size: 4vw;
+	}
+	h2 {
+		font-size: 3vw;
+	}
+}
