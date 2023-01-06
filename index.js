@@ -73,14 +73,22 @@ class Game {
 	AIPlay() {
 		let emptyPlaces = this.getCurrentEmptyPlaces()
 		let emptyPlace = emptyPlaces[Math.ceil(Math.random() * emptyPlaces.length - 1)]
-		this.placeMark(emptyPlace, 'X')
-		this.nextRound()
+		try {
+			this.placeMark(emptyPlace, 'X')
+			this.nextRound()
+		} catch (error) {
+			return	
+		}
 	}
 
 	userPlay(place) {
 		if (this.gameStatus) {
-			this.placeMark(place, 'O')
-			this.nextRound()
+			try {
+				this.placeMark(place, 'O')
+				this.nextRound()
+			} catch (error) {
+				return
+			}
 		}
 	}
 
