@@ -82,12 +82,16 @@ section {
 }
 
 a {
+	text-decoration-line: underline;	
+}
+
+#github {
 	font-size: larger;
 	color: black;
 	transition: color ease-in 0.3s;
 }
 
-a:hover {
+#github:hover {
 	color: blueviolet
 }
 
